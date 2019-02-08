@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>NASA Picture of the Day</title>
+        <link rel="stylesheet" type="text/css" href="css/framework7.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div id="app">
+          <div class="statusbar"></div>
+
+            <!-- Your main view, should have "view-main" class -->
+            <div class="view view-main">
+              <!-- Initial Page, "data-name" contains page name -->
+              <div data-name="home" class="page">
+                <div class="toolbar tabbar">
+                  <div class="toolbar-inner">
+                    <!-- Link that activates first tab, has the same href attribute (#tab1) as the id attribute of first tab (tab1)  -->
+                    <a href="#tab1" class="tab-link tab-link-active col-33">Picture of The Day</a>
+
+                    <!-- Link that activates 2nd tab, has the same href attribute (#tab2) as the id attribute of 2nd tab (tab2)  -->
+                    <a href="#tab2" class="tab-link col-33">Yesterday's Picture</a>
+                  </div>
+                </div>
+                <div class="tabs-animated-wrap">
+                  <div class="tabs">
+                    <div class="page-content tab tab-active" id="tab1">
+                      <img id="td-image"/>
+                      <div class="picture-description">
+                        <p id="td-copyright"></p>
+                        <p id="td-title"></p>
+                        <p id="td-explanation"></p>
+                      </div>
+                    </div>
+                    <div class="page-content tab" id="tab2">
+                      <img id="yd-image"/>
+                      <div class="picture-description">
+                        <p id="yd-copyright"></p>
+                        <p id="yd-title"></p>
+                        <p id="yd-explanation"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <!-- Link to another page -->
+              </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/apodapp.js"></script>
+        <script type="text/javascript" src="js/framework7.min.js"></script>
+        <script type="text/javascript" src="js/nasapic.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
